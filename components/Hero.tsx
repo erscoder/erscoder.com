@@ -83,9 +83,9 @@ export default function Hero() {
           >
             <span className="text-white font-medium">Web3 Engineer</span>
             <span className="mx-3 text-cyber-purple">|</span>
-            <span className="text-white font-medium">Blockchain Architect</span>
+            <span className="text-white font-medium">Solana Builder</span>
             <span className="mx-3 text-cyber-cyan">|</span>
-            <span className="text-white font-medium">DeFi Builder</span>
+            <span className="text-white font-medium">DeFi Developer</span>
           </motion.div>
 
           {/* Stats */}
