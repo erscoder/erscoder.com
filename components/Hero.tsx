@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ArrowDown, Github, Twitter, Linkedin } from 'lucide-react'
+import { Github, Twitter, Linkedin } from 'lucide-react'
 
 export default function Hero() {
   return (
@@ -171,17 +171,6 @@ export default function Hero() {
           </motion.div>
         </motion.div>
 
-        {/* Scroll indicator */}
-        <motion.div
-          className="absolute bottom-8 left-1/2 -translate-x-1/2"
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-        >
-          <a href="#about" className="flex flex-col items-center gap-2 text-gray-500 hover:text-white transition-colors">
-            <span className="text-xs uppercase tracking-widest">Scroll</span>
-            <ArrowDown className="w-5 h-5" />
-          </a>
-        </motion.div>
       </div>
     </section>
   )
