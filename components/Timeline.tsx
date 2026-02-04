@@ -97,9 +97,8 @@ export default function Timeline() {
 
               {/* Content */}
               <div className={`ml-16 md:ml-0 md:w-1/2 ${index % 2 === 0 ? 'md:pr-12' : 'md:pl-12'}`}>
-                <motion.div
+                <div
                   className="glass rounded-2xl p-6 card-hover relative overflow-hidden group"
-                  whileHover={{ scale: 1.02 }}
                 >
                   {/* Gradient accent */}
                   <div className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r ${exp.color}`} />
@@ -129,7 +128,7 @@ export default function Timeline() {
                       </div>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               </div>
             </motion.div>
           ))}

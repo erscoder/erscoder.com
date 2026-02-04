@@ -133,7 +133,7 @@ export default function Skills() {
             {['DDD', 'Hexagonal Architecture', 'Microservices', 'WebSockets', 'OCPP', 'Scrum', 'Git', 'React', 'Next.js', 'Angular', 'KYC/AML', 'Trading Bots'].map((skill) => (
               <span
                 key={skill}
-                className="px-3 py-1 text-xs glass rounded-full text-gray-400 hover:text-white hover:border-cyber-cyan/50 transition-colors cursor-default"
+                className="px-3 py-1 text-xs glass rounded-full text-gray-400"
               >
                 {skill}
               </span>

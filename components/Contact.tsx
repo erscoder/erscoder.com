@@ -80,7 +80,7 @@ export default function Contact() {
             </div>
 
             {/* Contact links */}
-            <div className="grid sm:grid-cols-2 gap-4 mb-8">
+            <div className="grid sm:grid-cols-2 gap-3 sm:gap-4 mb-8">
               {contactLinks.map((link, index) => (
                 <motion.a
                   key={link.name}
@@ -90,15 +90,15 @@ export default function Contact() {
                   initial={{ opacity: 0, x: -20 }}
                   animate={isInView ? { opacity: 1, x: 0 } : {}}
                   transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
-                  className={`flex items-center gap-4 p-4 glass rounded-xl ${link.color} transition-colors group`}
+                  className={`flex items-center gap-3 sm:gap-4 p-3 sm:p-4 glass rounded-xl ${link.color} transition-colors group min-w-0`}
                   whileHover={{ scale: 1.02 }}
                 >
-                  <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center group-hover:bg-white/10 transition-colors">
-                    <link.icon className="w-5 h-5" />
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-white/5 flex items-center justify-center group-hover:bg-white/10 transition-colors flex-shrink-0">
+                    <link.icon className="w-4 h-4 sm:w-5 sm:h-5" />
                   </div>
-                  <div>
+                  <div className="min-w-0 flex-1">
                     <p className="text-xs text-gray-500 uppercase tracking-wider">{link.name}</p>
-                    <p className="font-medium">{link.value}</p>
+                    <p className="font-medium text-sm sm:text-base truncate">{link.value}</p>
                   </div>
                 </motion.a>
               ))}
