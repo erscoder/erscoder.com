@@ -53,13 +53,14 @@ export default function Hero() {
         >
           {/* Code-style intro */}
           <motion.div
-            className="inline-block mb-6"
+            className="mb-6"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2 }}
           >
-            <code className="text-cyber-cyan font-mono text-sm md:text-base px-4 py-2 rounded-full glass">
-              {'>'} Building the decentralized future since 2005
+            <code className="text-cyber-cyan font-mono text-xs sm:text-sm md:text-base px-3 sm:px-4 py-2 rounded-full glass inline-block">
+              <span className="hidden sm:inline">{'>'} Building the decentralized future since 2005</span>
+              <span className="sm:hidden">{'>'} Building Web3 since 2005</span>
             </code>
           </motion.div>
 
