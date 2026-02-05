@@ -12,7 +12,6 @@ const projects = [
     tags: ['Solana', 'TypeScript', 'AWS', 'MongoDB'],
     icon: TrendingUp,
     gradient: 'from-cyber-cyan to-blue-500',
-    featured: true,
   },
   {
     title: 'SamuraiBot',
@@ -68,29 +67,20 @@ export default function Projects() {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className={`glass rounded-2xl overflow-hidden card-hover group ${
-                project.featured ? 'md:col-span-2' : ''
-              }`}
+              className="glass rounded-2xl overflow-hidden card-hover group"
             >
               {/* Gradient top bar */}
               <div className={`h-1 bg-gradient-to-r ${project.gradient}`} />
 
-              <div className={`p-8 ${project.featured ? 'md:flex md:items-center md:gap-8' : ''}`}>
-                <div className={`mb-6 ${project.featured ? 'md:mb-0 md:w-1/3' : ''}`}>
+              <div className="p-8">
+                <div className="mb-6">
                   <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${project.gradient} flex items-center justify-center group-hover:scale-110 transition-transform`}>
                     <project.icon className="w-8 h-8 text-white" />
                   </div>
                 </div>
 
-                <div className={project.featured ? 'md:w-2/3' : ''}>
-                  <div className="flex items-start justify-between mb-3">
-                    <h3 className="text-2xl font-bold">{project.title}</h3>
-                    {project.featured && (
-                      <span className="px-3 py-1 text-xs font-medium bg-gradient-to-r from-cyber-cyan to-cyber-purple text-dark-900 rounded-full">
-                        Featured
-                      </span>
-                    )}
-                  </div>
+                <div>
+                  <h3 className="text-2xl font-bold mb-3">{project.title}</h3>
 
                   <p className="text-gray-400 mb-4 leading-relaxed">
                     {project.description}
