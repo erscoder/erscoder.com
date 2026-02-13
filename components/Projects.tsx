@@ -3,9 +3,18 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
-import { ExternalLink, Github, Zap, Shield, TrendingUp, Bot } from 'lucide-react'
+import { ExternalLink, Github, Zap, Shield, TrendingUp, Bot, BookOpen } from 'lucide-react'
 
 const projects = [
+  {
+    title: 'IA Rentable',
+    description: 'Published book on Amazon: 12 proven business models you can build with AI, no code required. Includes real revenue numbers, automation workflows, and a 90-day action plan to go from idea to income.',
+    tags: ['AI', 'Business', 'Automation', 'Amazon KDP'],
+    icon: BookOpen,
+    gradient: 'from-emerald-400 to-cyber-cyan',
+    link: 'https://amzn.eu/d/0jgJo1hP',
+    cover: '/ia-rentable-cover.jpg',
+  },
   {
     title: 'xFractal Trading API',
     description: 'High-performance trading API integrating multiple Solana DEXs (Meteora, Raydium, Orca, Pump.fun, PumpSwap). Built with hexagonal architecture for maximum scalability.',
@@ -73,28 +82,48 @@ export default function Projects() {
               <div className={`h-1 bg-gradient-to-r ${project.gradient}`} />
 
               <div className="p-8">
-                <div className="mb-6">
-                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${project.gradient} flex items-center justify-center group-hover:scale-110 transition-transform`}>
-                    <project.icon className="w-8 h-8 text-white" />
-                  </div>
-                </div>
+                <div className={'cover' in project && project.cover ? 'flex items-start gap-6' : ''}>
+                  {'cover' in project && project.cover ? (
+                    <div className="w-28 flex-shrink-0 rounded-lg overflow-hidden shadow-lg group-hover:scale-105 transition-transform">
+                      <img src={project.cover} alt={project.title} className="w-full h-auto" />
+                    </div>
+                  ) : (
+                    <div className="mb-6">
+                      <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${project.gradient} flex items-center justify-center group-hover:scale-110 transition-transform`}>
+                        <project.icon className="w-8 h-8 text-white" />
+                      </div>
+                    </div>
+                  )}
 
-                <div>
-                  <h3 className="text-2xl font-bold mb-3">{project.title}</h3>
+                  <div>
+                    <h3 className="text-2xl font-bold mb-3">{project.title}</h3>
 
-                  <p className="text-gray-400 mb-4 leading-relaxed">
-                    {project.description}
-                  </p>
+                    <p className="text-gray-400 mb-4 leading-relaxed">
+                      {project.description}
+                    </p>
 
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="text-xs px-3 py-1 rounded-full bg-white/5 text-gray-400 border border-white/10"
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {project.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="text-xs px-3 py-1 rounded-full bg-white/5 text-gray-400 border border-white/10"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+
+                    {'link' in project && project.link && (
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-sm text-cyber-cyan hover:text-white transition-colors"
                       >
-                        {tag}
-                      </span>
-                    ))}
+                        <ExternalLink className="w-4 h-4" />
+                        View on Amazon
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
