@@ -56,7 +56,7 @@ export default function Navigation() {
               <Code2 className="w-6 h-6 text-dark-900" />
             </div>
             <span className="font-bold text-xl hidden sm:block">
-              <span className="gradient-text">Kike</span>
+              <span className="gradient-text">erscoder</span>
             </span>
           </motion.a>
 
