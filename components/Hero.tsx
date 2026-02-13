@@ -82,11 +82,12 @@ export default function Hero() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
           >
-            <span className="text-white font-medium">AI & Web3 Engineer</span>
+            <span className="text-white font-medium">Full-Stack Developer</span>
             <span className="mx-3 text-cyber-purple">|</span>
             <span className="text-white font-medium">AI Agents Developer</span>
             <span className="mx-3 text-cyber-cyan">|</span>
             <span className="text-white font-medium">DeFi Developer</span>
+
           </motion.div>
 
           {/* Stats */}
