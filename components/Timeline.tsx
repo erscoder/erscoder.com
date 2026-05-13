@@ -3,50 +3,50 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
-import { Briefcase, Rocket, Zap, Car, Building2 } from 'lucide-react'
+import { Briefcase, Rocket, Car, Building2, Network } from 'lucide-react'
 
 const experiences = [
   {
-    company: 'xFractal',
-    role: 'Senior Software Developer / Team Lead',
-    period: '2024 - 2026',
-    description: 'Leading the charge on Solana. Built Trading API integrating Meteora, Raydium, Orca, Pump.fun, and more. Architected the entire backend with hexagonal architecture.',
-    highlights: ['Solana', 'Trading API', 'Team Lead', 'AWS'],
-    icon: Rocket,
-    color: 'from-cyber-cyan to-blue-500',
+    company: 'ErsLabs — Synapseia Network',
+    role: 'Founder & AI Systems Architect',
+    period: 'Jan 2026 - Present',
+    description: 'Building Synapseia Network: a decentralized peer-to-peer network where AI nodes collaborate to process and validate research papers autonomously. Coordinator-node architecture, peer review consensus, on-chain staking tiers, and SYN token rewards on Solana. Also shipped Sentinel V2 (17 CrewAI agents → SaaS MVPs), Marcus (Hyperliquid LLM trader), and the IA Rentable book.',
+    highlights: ['Synapseia', 'Solana', 'NestJS', 'Tauri 2', 'CrewAI', 'Claude API', 'SYN Token'],
+    icon: Network,
+    color: 'from-cyber-cyan to-cyber-purple',
   },
   {
-    company: 'Web3Software',
-    role: 'Software Engineer',
-    period: '2024',
-    description: 'Built SamuraiBot — a high-performance Telegram trading bot on Solana. Spearheaded Robin Protocol for multichain token recovery from compromised wallets.',
-    highlights: ['SamuraiBot', 'Robin Protocol', 'Telegram Bots'],
-    icon: Zap,
-    color: 'from-cyber-purple to-pink-500',
+    company: 'xFractal',
+    role: 'Senior Software Developer / Team Lead',
+    period: 'Mar 2025 - Jan 2026',
+    description: 'Designed and developed the Trading API integrating Solana DEXs (Meteora, Raydium, Orca, Pump.fun, PumpSwap, Moonshot) with hexagonal architecture. Built the order engine (limit + DCA), referral system, and the AYA agent swarm coordinator using LangGraph + RAG + Redis + MongoDB.',
+    highlights: ['Solana', 'Trading API', 'LangGraph', 'AWS', 'Team Lead'],
+    icon: Rocket,
+    color: 'from-cyan-400 to-blue-500',
   },
   {
     company: 'Brave',
     role: 'Senior Software Developer / Team Lead',
-    period: '2021 - 2024',
-    description: 'Designed BravePro & BravePay APIs for financial services. Built trading bots, KYC systems, and reduced response times by 60%. Pure fintech magic.',
-    highlights: ['BravePro API', 'Trading Bots', 'KYC', 'Stripe'],
+    period: 'Apr 2022 - Mar 2025',
+    description: 'Designed BravePro & BravePay APIs for financial services — 60% faster response times and auto-scaling. Built the KYC service (-70% onboarding time), USDB/USDC stability bot, rewards engine, subscription manager, oracle price feed, and Stripe fiat deposits.',
+    highlights: ['BravePro API', 'KYC', 'Trading Bots', 'AWS', 'Stripe'],
     icon: Building2,
     color: 'from-orange-400 to-red-500',
   },
   {
     company: 'Wallbox',
     role: 'Senior Engineer',
-    period: '2019 - 2020',
-    description: 'Implemented real-time WebSocket connections between EV chargers and backend using OCPP protocol. Improved customer satisfaction by 45%.',
+    period: 'Mar 2020 - Jan 2021',
+    description: 'Implemented real-time WebSocket connections between EV chargers and backend using the OCPP protocol. Developed firmware update tooling via API — improved customer satisfaction by 45%.',
     highlights: ['WebSockets', 'OCPP', 'IoT', 'Firmware'],
     icon: Car,
     color: 'from-green-400 to-emerald-500',
   },
   {
     company: 'Earlier Adventures',
-    role: 'Various Senior Roles',
-    period: '2005 - 2019',
-    description: 'Payment platforms (CanaryPAY), banking applications (Bankia, BBVA), consulting across Europe. 14+ years of battle-tested experience.',
+    role: 'Lead Developer, Backend & Consulting Roles',
+    period: '2005 - 2020',
+    description: 'CanaryPAY payment platform with PayPal + Onfido KYC (Logixs). VISA verification for Bankia (Melit). Vocento-Beauty backend + Málaga councils budgeting (Autentia). Bank consulting at OESIA, Axpe, and DMR Consulting (Everis). 15 years of battle-tested fintech and consulting groundwork.',
     highlights: ['Fintech', 'Banking', 'Payments', 'Consulting'],
     icon: Briefcase,
     color: 'from-gray-400 to-gray-600',
@@ -73,7 +73,7 @@ export default function Timeline() {
             The <span className="gradient-text">Journey</span> So Far
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            From junior consultant to Web3 team lead — every step shaped who I am today.
+            From junior consultant to AI Systems Architect building Synapseia Network — every step shaped who I am today.
           </p>
         </motion.div>
 

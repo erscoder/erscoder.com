@@ -3,9 +3,19 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
-import { ExternalLink, Github, Zap, Shield, TrendingUp, Bot, BookOpen } from 'lucide-react'
+import { ExternalLink, Github, Zap, Shield, TrendingUp, Bot, BookOpen, Network } from 'lucide-react'
 
 const projects = [
+  {
+    title: 'Synapseia Network',
+    description: 'Decentralized peer-to-peer network where AI nodes collaborate to process and validate research papers autonomously. Each node runs a continuous cycle — query coordinator, evaluate reward vs difficulty, train or run inference locally, score, submit. Peer review consensus + on-chain staking tiers + SYN token rewards on Solana.',
+    tags: ['Solana', 'NestJS', 'Tauri 2', 'Distributed AI', 'SYN Token'],
+    icon: Network,
+    gradient: 'from-cyber-cyan to-cyber-purple',
+    link: 'https://synapseia.network',
+    linkLabel: 'Visit synapseia.network',
+    cover: '/synapseia-cover.png',
+  },
   {
     title: 'IA Rentable',
     description: 'Published book on Amazon: 12 proven business models you can build with AI, no code required. Includes real revenue numbers, automation workflows, and a 90-day action plan to go from idea to income.',
@@ -121,7 +131,7 @@ export default function Projects() {
                         className="inline-flex items-center gap-2 text-sm text-cyber-cyan hover:text-white transition-colors"
                       >
                         <ExternalLink className="w-4 h-4" />
-                        View on Amazon
+                        {'linkLabel' in project && project.linkLabel ? project.linkLabel : 'View on Amazon'}
                       </a>
                     )}
                   </div>
