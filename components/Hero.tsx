@@ -72,7 +72,7 @@ export default function Hero() {
             transition={{ delay: 0.3 }}
           >
             <span className="block text-white">Hey, I'm</span>
-            <span className="gradient-text text-glow block">Kike Rubio</span>
+            <span className="gradient-text text-glow block">Enrique Rubio</span>
           </motion.h1>
 
           {/* Animated role text */}
