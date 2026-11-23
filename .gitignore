@@ -25,3 +25,7 @@ npm-debug.log*
 # TypeScript
 *.tsbuildinfo
 next-env.d.ts
+
+# Local-only (npm is the package manager of record)
+pnpm-lock.yaml
+AGENT-DONE.txt

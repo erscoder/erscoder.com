@@ -1,65 +1,25 @@
 # erscoder.com
 
-My personal website & portfolio — built with **Next.js** + **TypeScript** + **Tailwind CSS**.
+Personal site of Enrique Rubio, the online version of the CV.
 
-🌐 **Live:** [erscoder.com](https://erscoder.com)
+Static site built with Next.js 14 (`output: 'export'`). Cloudflare Pages deploys `main` on every push.
 
----
-
-## ✨ Features
-
-- 🎨 Modern, minimal design with dark mode
-- 📱 Fully responsive (mobile-first)
-- ⚡ Server-side rendering with Next.js App Router
-- 🔧 TypeScript for type safety
-- 🎯 SEO optimized
-- 🚀 Deployed on Vercel
-
----
-
-## 🛠️ Tech Stack
-
-- **Framework:** [Next.js 14](https://nextjs.org)
-- **Language:** [TypeScript](https://www.typescriptlang.org)
-- **Styling:** [Tailwind CSS](https://tailwindcss.com)
-- **Deployment:** [Vercel](https://vercel.com)
-
----
-
-## 🚀 Quick Start
+## Commands
 
 ```bash
-# Install dependencies
 npm install
-
-# Run development server
-npm run dev
-
-# Build for production
-npm run build
-
-# Start production server
-npm start
+npm run dev     # local development
+npm run build   # static export to out/
+npx serve out   # preview the export
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+## Layout
 
----
+- `content/cv.ts`: all copy and figures. The CV is the single source of truth.
+- `app/page.tsx`: the page, server-rendered into static HTML.
+- `app/globals.css`: the whole design system (tokens, dark and light themes).
+- `components/KineticName.tsx`: hero name, each letter driven on the font width axis.
+- `components/ContourField.tsx`: WebGL2 contour shader, initialised when the browser is idle.
+- `components/Header.tsx`: navigation, mobile menu and theme toggle.
 
-## 📂 Project Structure
-
-```
-erscoder.com/
-├── app/             # Next.js App Router pages
-├── components/      # React components
-├── public/          # Static assets
-├── PROFILE_DATA.md  # Personal info & content
-├── package.json
-└── tailwind.config.ts
-```
-
----
-
-## 📝 License
-
-MIT © Kike (erscoder)
+Motion is disabled under `prefers-reduced-motion`. The phone number and the CV PDF are never published.
