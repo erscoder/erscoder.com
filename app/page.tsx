@@ -177,6 +177,11 @@ export default function Page() {
                   cross-model review and automated merge gates: 858 commits, 84 tickets, ~2,300 unit and 233 Playwright
                   e2e tests.
                 </p>
+                <p>
+                  <a className="link" href="https://f1.erslabs.net" rel="noopener">
+                    f1.erslabs.net
+                  </a>
+                </p>
               </div>
             </article>
 
